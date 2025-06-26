@@ -23,8 +23,6 @@ def connect_to_db():
 if __name__ == "__main__":
     connection = connect_to_db()
     if connection:
-        # Now you can use the 'connection' object to perform database operations
-        # Example:
         cursor = connection.cursor()
         cursor.execute("SELECT version();")
         db_version = cursor.fetchone()

@@ -32,7 +32,7 @@ COMMENT ON SCHEMA "SCH_TASKS"
 
 CREATE TABLE IF NOT EXISTS "SCH_TASKS"."T_TDO_TASKS"
 (
-    "ID" numeric NOT NULL,
+    "ID" BIGSERIAL NOT NULL,
     "TASK_DESC" text COLLATE pg_catalog."default" NOT NULL,
     "IS_COMPLETED" boolean NOT NULL,
     CONSTRAINT "T_TDO_TASKS_pkey" PRIMARY KEY ("ID")
@@ -45,18 +45,4 @@ ALTER TABLE IF EXISTS "SCH_TASKS"."T_TDO_TASKS"
 
 COMMENT ON TABLE "SCH_TASKS"."T_TDO_TASKS"
     IS 'To store the tasks';
-	
-	
-INSERT INTO "SCH_TASKS"."T_TDO_TASKS" (
-"ID", "TASK_DESC", "IS_COMPLETED") VALUES 
-(1,	'walk daily',false),
-(2,	'Doodle',false),
-(3,	'Journal',false),
-(4,	'Meditation',false),
-(5,	'Write Gratitude Journal',	false),
-(6, 'Read books', false),
-(7, 'Breathing Exercises', false)
-;
-	
-	
-	
+    
